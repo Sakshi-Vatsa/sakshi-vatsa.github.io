@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sakshi Vatsa | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -15,7 +16,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #fff;
+      background: #f9f9f9;
       color: #222;
       line-height: 1.6;
       padding: 2rem;
@@ -24,7 +25,17 @@
     }
 
     header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
       margin-bottom: 2rem;
+    }
+
+    header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     h1 {
@@ -35,6 +46,28 @@
       margin-top: 0.5rem;
       color: #555;
       font-size: 0.9rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 0.5rem 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     section {
@@ -74,23 +107,50 @@
     a:hover {
       text-decoration: underline;
     }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Sakshi Vatsa</h1>
-    <div class="contact">
-      <a href="mailto:vatsasakshi@gmail.com">vatsasakshi@gmail.com</a>
+    <img src="https://avatars.githubusercontent.com/u/59083599?v=4" alt="Sakshi Vatsa">
+    <div>
+      <h1>Sakshi Vatsa</h1>
+      <div class="contact">
+        <a href="mailto:vatsasakshi@gmail.com">vatsasakshi@gmail.com</a> |
+        <a href="mailto:vatsasakshi0411@gmail.com">vatsasakshi0411@gmail.com</a> |
+        +353 852106700
+      </div>
     </div>
   </header>
 
-  <section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#achievements">Achievements</a>
+  </nav>
+
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>Software Development Engineer II at Amazon Ireland with a background in Computer Engineering. Passionate about building scalable systems and applying machine learning to real-world problems.</p>
   </section>
 
-  <section>
+  <section id="experience" data-aos="fade-up">
     <h2>Experience</h2>
     <div class="item">
       <h3>Amazon | SDE II</h3>
@@ -104,7 +164,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="item">
       <h3><a href="https://ieeexplore.ieee.org/abstract/document/9509636">COVID-19 Tweet Analysis</a></h3>
@@ -116,12 +176,12 @@
     </div>
   </section>
 
-  <section>
+  <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
     <p>Java (Core), Python, React, Web Dev, ML, NLP, Deep Learning, MySQL, Data Structures & Algorithms</p>
   </section>
 
-  <section>
+  <section id="education" data-aos="fade-up">
     <h2>Education</h2>
     <div class="item">
       <h3>Delhi Technological University</h3>
@@ -137,7 +197,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="achievements" data-aos="fade-up">
     <h2>Achievements</h2>
     <ul>
       <li>Top 3 CS scorers in 5 semesters</li>
@@ -146,6 +206,15 @@
       <li>Silver medal - D-Mart Math Olympiad</li>
     </ul>
   </section>
+
+  <footer>
+    © 2025 Sakshi Vatsa • Built with ❤️ and HTML/CSS • <a href="https://github.com/Sakshi-Vatsa" target="_blank">GitHub</a>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
