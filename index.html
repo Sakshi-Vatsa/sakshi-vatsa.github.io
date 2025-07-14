@@ -1,338 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sakshi Vatsa - Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakshi Vatsa | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    /* Reset & base */
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.5;
+      background: #fff;
+      color: #222;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
     }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .contact {
+      margin-top: 0.5rem;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+
+    .item {
+      margin-bottom: 1.5rem;
+    }
+
+    .item h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .item .meta {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .item p {
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+    }
+
     a {
-      color: #1a73e8;
+      color: #003366;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-
-    /* Container & layout */
-    .container {
-      max-width: 960px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem 3rem;
-      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
-      border-radius: 8px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    header h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 2.8rem;
-      letter-spacing: 1px;
-      color: #222;
-    }
-    header p {
-      margin: 0.5rem 0 0;
-      font-weight: 500;
-      color: #555;
-      font-size: 1rem;
-    }
-
-    main {
-      display: flex;
-      gap: 3rem;
-    }
-
-    /* Sidebar */
-    aside {
-      flex: 0 0 28%;
-      border-right: 2px solid #e0e0e0;
-      padding-right: 1.5rem;
-    }
-    aside section {
-      margin-bottom: 2.5rem;
-    }
-    aside h2 {
-      border-bottom: 2px solid #1a73e8;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      color: #1a73e8;
-      font-weight: 700;
-      font-size: 1.3rem;
-    }
-    .education-item,
-    .skill-list {
-      margin-bottom: 1rem;
-    }
-    .education-item strong {
-      display: block;
-      font-weight: 600;
-      font-size: 1.05rem;
-      color: #222;
-      margin-bottom: 0.15rem;
-    }
-    .education-item em {
-      color: #666;
-      font-style: normal;
-      font-weight: 500;
-    }
-    .education-item .details {
-      font-weight: 600;
-      color: #444;
-      margin-top: 0.2rem;
-      font-size: 0.95rem;
-    }
-    .skill-list {
-      list-style: none;
-      padding: 0;
-      columns: 2;
-      column-gap: 1rem;
-      color: #444;
-      font-weight: 500;
-    }
-    .skill-list li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Main content */
-    section.content {
-      flex: 1;
-    }
-    section.content section {
-      margin-bottom: 2.5rem;
-    }
-    section.content h2 {
-      border-bottom: 2px solid #1a73e8;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1.5rem;
-      color: #1a73e8;
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
-    article.position {
-      margin-bottom: 1.8rem;
-    }
-    article.position h3 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #222;
-    }
-    article.position .role {
-      font-style: italic;
-      color: #555;
-      font-weight: 600;
-      margin: 0.15rem 0 0.6rem;
-      font-size: 1rem;
-    }
-    article.position .location {
-      color: #888;
-      font-size: 0.9rem;
-      margin-bottom: 0.9rem;
-      font-weight: 500;
-    }
-    article.position p,
-    article.position ul {
-      margin: 0 0 0.8rem 0;
-      font-size: 1rem;
-      color: #444;
-    }
-    article.position ul {
-      padding-left: 1.2rem;
-      list-style: disc;
-      color: #444;
-    }
-
-    /* Projects as paragraphs */
-    article.project {
-      margin-bottom: 1.8rem;
-    }
-    article.project h3 {
-      margin: 0 0 0.4rem 0;
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: #222;
-    }
-    article.project .project-meta {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 0.7rem;
-    }
-    article.project p {
-      margin: 0;
-      color: #444;
-      font-size: 1rem;
-    }
-
-    /* Achievements */
-    section.content ul.achievements {
-      list-style: none;
-      padding-left: 0;
-      color: #444;
-      font-weight: 500;
-    }
-    section.content ul.achievements li {
-      margin-bottom: 0.8rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 720px) {
-      main {
-        flex-direction: column;
-      }
-      aside {
-        border-right: none;
-        border-bottom: 2px solid #e0e0e0;
-        padding-right: 0;
-        padding-bottom: 1.5rem;
-        margin-bottom: 2rem;
-      }
-    }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>Sakshi Vatsa</h1>
-      <p>
-        <a href="mailto:vatsasakshi@gmail.com">vatsasakshi@gmail.com</a> |
-        +353 852106700 |
-        <a href="mailto:vatsasakshi0411@gmail.com">vatsasakshi0411@gmail.com</a>
-      </p>
-    </header>
+  <header>
+    <h1>Sakshi Vatsa</h1>
+    <div class="contact">
+      <a href="mailto:vatsasakshi@gmail.com">vatsasakshi@gmail.com</a> |
+      <a href="mailto:vatsasakshi0411@gmail.com">vatsasakshi0411@gmail.com</a> |
+      +353 852106700
+    </div>
+  </header>
 
-    <main>
-      <aside>
-        <section>
-          <h2>Education</h2>
-          <div class="education-item">
-            <strong>Delhi Technological University</strong>
-            <div>B.Tech in Computer Engineering</div>
-            <em>New Delhi, India</em>
-            <div class="details">
-              Cum. GPA: 9.27 / 10.0<br />
-              First Division with Distinction
-            </div>
-          </div>
-          <div class="education-item">
-            <strong>Vijaya Ratna Junior College</strong>
-            <div>XII Standard</div>
-            <em>Hyderabad, India</em>
-            <div class="details">Score - 98.4 (100% in MPC)</div>
-          </div>
-          <div class="education-item">
-            <strong>Delhi Public School Gandhinagar</strong>
-            <em>Ahmedabad, India</em>
-            <div class="details">CBSE Class X (2014) - 10.0 / 10</div>
-          </div>
-        </section>
+  <section>
+    <h2>About Me</h2>
+    <p>Software Development Engineer II at Amazon Ireland with a background in Computer Engineering. Passionate about building scalable systems and applying machine learning to real-world problems.</p>
+  </section>
 
-        <section>
-          <h2>Skills</h2>
-          <ul class="skill-list">
-            <li>Java (core)</li>
-            <li>React</li>
-            <li>Web Development</li>
-            <li>Python</li>
-            <li>Machine Learning</li>
-            <li>Data Structure</li>
-            <li>Algorithms</li>
-            <li>MySQL</li>
-            <li>Artificial Intelligence</li>
-            <li>Deep Learning</li>
-            <li>Natural Language Processing</li>
-          </ul>
-        </section>
+  <section>
+    <h2>Experience</h2>
+    <div class="item">
+      <h3>Amazon | SDE II</h3>
+      <div class="meta">Dublin, Ireland | Oct 2021 – Present</div>
+      <p>Led deprecation of legacy services, reduced cost by 15K/year, built scalable services using React, Python, AWS. Delivered document upload/download for Time Away requests. Accelerated project timelines with innovative Redux and Module Federation practices.</p>
+    </div>
+    <div class="item">
+      <h3>Morgan Stanley | Software Dev Intern</h3>
+      <div class="meta">Mumbai, India | May 2020 – Jul 2020</div>
+      <p>Improved ML classification accuracy to 85%. Built an automated word cloud generator using a custom TF-IDF method.</p>
+    </div>
+  </section>
 
-        <section>
-          <h2>Position of Responsibility</h2>
-          <div>
-            Head | Debating Society of DTU (August 2019 - August 2020)
-          </div>
-        </section>
-      </aside>
+  <section>
+    <h2>Projects</h2>
+    <div class="item">
+      <h3><a href="https://ieeexplore.ieee.org/abstract/document/9509636">COVID-19 Tweet Analysis</a></h3>
+      <p>Published research on a hybrid keyword extraction model outperforming standard techniques by 3% precision.</p>
+    </div>
+    <div class="item">
+      <h3><a href="https://github.com/Vatsa0411/Detection-of-Most-Influential-Nodes-in-a-Social-Network">Influential Nodes in Social Network</a></h3>
+      <p>Designed a model using community detection to improve Infected Scale by 4% compared to standard graph models.</p>
+    </div>
+  </section>
 
-      <section class="content">
-        <section>
-          <h2>Experience</h2>
+  <section>
+    <h2>Skills</h2>
+    <p>Java (Core), Python, React, Web Dev, ML, NLP, Deep Learning, MySQL, Data Structures & Algorithms</p>
+  </section>
 
-          <article class="position">
-            <h3>Amazon Development Centre Ireland</h3>
-            <div class="role">Software Development Engineer II - React, Python, AWS</div>
-            <div class="location">Oct 2021 - Present | Dublin, Ireland</div>
-            <p>
-              Led the deprecation of an outdated service, addressing performance and response issues for over 1.7 million Amazon employees. Connected with key stakeholders to devise alternatives, performing away team work to build necessary API changes. Influenced senior product teams (L7+) to adopt optimal post-deprecation user experience solutions. Achieved annual cost savings of 15K, reduced maintenance by eliminating one service, and delivered a faster, more efficient user experience.
-            </p>
-            <p>
-              Worked on implementation, testing, launch and continued operational excellence for a time away service for all Amazon employees (1.7 million users).
-            </p>
-            <p>
-              Designed the architecture and delivered a service for users to upload and download time off request supporting documents.
-            </p>
-            <p>
-              Established innovative solutions using Module federation principles and Redux knowledge to deliver time away service for admins and managers by reducing delivery time from 9 to 4 weeks.
-            </p>
-          </article>
+  <section>
+    <h2>Education</h2>
+    <div class="item">
+      <h3>Delhi Technological University</h3>
+      <div class="meta">B.Tech, Computer Engineering | GPA: 9.27/10</div>
+    </div>
+    <div class="item">
+      <h3>Vijaya Ratna Junior College</h3>
+      <div class="meta">XII | 98.4% (100% in MPC)</div>
+    </div>
+    <div class="item">
+      <h3>DPS Gandhinagar</h3>
+      <div class="meta">CBSE Class X | 10.0/10</div>
+    </div>
+  </section>
 
-          <article class="position">
-            <h3>Morgan Stanley</h3>
-            <div class="role">Software Development Intern - Python, NLP</div>
-            <div class="location">May 2020 - July 2020 | Mumbai, India</div>
-            <p>
-              Invented a model that generates Automated Word Cloud from scratch to an accuracy of around 80-85% using a self-modified TF-IDF approach. Improved accuracy of an inherited Multi Text Classification model from 60-70% to almost 85%.
-            </p>
-          </article>
-        </section>
-
-        <section>
-          <h2>Projects</h2>
-
-          <article class="project">
-            <h3>COVID-19 Tweet Analysis Using Automated Keyword Extraction</h3>
-            <div class="project-meta">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9509636" target="_blank" rel="noopener noreferrer">Research Paper Link</a> | August 2020 - Feb 2021
-            </div>
-            <p>
-              Research project based on invention of a new and enhanced Automated Keyword Extraction Approach. Developed a novel model which is a hybrid of graph-based and topic modelling based approaches of Keyword Extraction. Current model provides 3% better precision than all standard models.
-            </p>
-          </article>
-
-          <article class="project">
-            <h3><a href="https://github.com/Vatsa0411/Detection-of-Most-Influential-Nodes-in-a-Social-Network" target="_blank" rel="noopener noreferrer">Detection of Influential Nodes in a Social Network</a></h3>
-            <div class="project-meta">
-              August 2019 – Dec 2019
-            </div>
-            <p>
-              Developed a model to find a set of most influential nodes in a social network under the knowledgeable guidance of Mr. Sanjay Kumar (Assistant Professor, Department of Computer Science, DTU). Implemented model emphasizes the role of community detection in a social network graph and improves the Infected Scale by almost 4% compared to all standard models.
-            </p>
-          </article>
-        </section>
-
-        <section>
-          <h2>Achievements</h2>
-          <ul class="achievements">
-            <li>Amongst <strong>Top 3 CS Department Rank Scorers</strong> in 5 semesters.</li>
-            <li>Secured an <strong>All India Rank of 2659</strong> in JEE-Mains 2017.</li>
-            <li>Secured a <strong>100% score in MPC</strong> in Class XII Examinations.</li>
-            <li>Secured <strong>Silver medal at All India Level</strong> D-Mart Math Olympiad in 2014.</li>
-          </ul>
-        </section>
-      </section>
-    </main>
-  </div>
+  <section>
+    <h2>Achievements</h2>
+    <ul>
+      <li>Top 3 CS scorers in 5 semesters</li>
+      <li>All India Rank 2659 - JEE Mains 2017</li>
+      <li>100% score in MPC in Class XII</li>
+      <li>Silver medal - D-Mart Math Olympiad</li>
+    </ul>
+  </section>
 </body>
+
 </html>
